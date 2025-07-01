@@ -4,7 +4,7 @@
 
 Data Source:
 
-            https://www.kaggle.com/datasets/ahmedmohamed2003/retail-store-sales-dirty-for-data-cleaning
+    https://www.kaggle.com/datasets/ahmedmohamed2003/retail-store-sales-dirty-for-data-cleaning
 
 
 Started by diving into the data to understand the beast:
@@ -12,6 +12,7 @@ Started by diving into the data to understand the beast:
 - Checked data types, columns, and null values
 - Spotted high and low cardinality features
 - Got familiar with the structure and quirks of the dataset
+
 Key discoveries:
 
 - “Quantity” needs to be converted from float to int
