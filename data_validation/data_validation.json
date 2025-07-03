@@ -1,0 +1,78 @@
+{
+    "columns": {
+        "Transaction ID": {
+            "type": "string",
+            "critical": true,
+            "description": "Unique identifier for each transaction, should not be null.",
+            "allow_null": false
+        },
+        "Customer ID": {
+            "type": "string",
+            "critical": true,
+            "description": "Unique identifier for each customer, should not be null.",
+            "allow_null": false
+        },
+        "Category": {
+            "type": "string",
+            "critical": false,
+            "description": "Category of the item sold.",
+            "allow_null": true
+        },
+        "Item": {
+            "type": "string",
+            "critical": false,
+            "description": "Identifier for the item sold, should be cleaned to remove unnecessary prefixes.",
+            "allow_null": true
+        },
+        "Price Per Unit": {
+            "type": "float",
+            "critical": false,
+            "description": "Price per unit of the item, should not be negative or null.",
+            "allow_null": false,
+            "min_value": 0
+        },
+        "Quantity": {
+            "type": "int",
+            "critical": false,
+            "description": "Quantity of the item sold, should be a non-negative integer.",
+            "allow_null": false,
+            "min_value": 0,
+            "max_value": 10
+        },
+        "Total Spent": {
+            "type": "float",
+            "critical": false,
+            "description": "Total amount spent in the transaction, should be non-negative if both quantity and price are available.",
+            "allow_null": true,
+            "min_value": 0
+        }, 
+        "Payment Method": {
+            "type": "string",
+            "critical": false,
+            "description": "Method of payment used in the transaction.",
+            "allow_null": true,
+            "allowed_values": ["Digital Wallet", "Credit Card", "Cash"]
+        },
+        "Location": {
+            "type": "string",
+            "critical": false,
+            "description": "Location where the transaction took place.",
+            "allow_null": true,
+            "allowed_values": ["Online", "In-store"]
+        },
+        "Transaction Date": {
+            "type": "date",
+            "critical": false,
+            "description": "Date of the transaction, should be in a valid date format.",
+            "allow_null": true,
+            "date_format": "YYYY-MM-DD",
+            "max_value": "now"
+        },
+        "Discount Applied": {
+            "type": "boolean",
+            "critical": false,
+            "description": "Indicates whether a discount was applied to the transaction.",
+            "allow_null": true
+        }
+    }
+}
