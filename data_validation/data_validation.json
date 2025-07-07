@@ -7,7 +7,7 @@
             "allow_null": false
         },
         "Customer ID": {
-            "type": "string",
+            "type": "int",
             "critical": true,
             "description": "Unique identifier for each customer, should not be null.",
             "allow_null": false

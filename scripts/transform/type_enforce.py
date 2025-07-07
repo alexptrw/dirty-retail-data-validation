@@ -1,3 +1,4 @@
+import pandas as pd
 def type_enforce(df):
     df["Transaction ID"] = df["Transaction ID"].astype("string")
     df["Customer ID"] = df["Customer ID"].astype("string")
